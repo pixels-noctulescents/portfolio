@@ -6,21 +6,79 @@
   height: 100dvh;
   display: flex;
   flex-direction: column;
+  user-select: none;
   gap: 5rem;
   justify-content: center;
   align-items: center;
   background: #dfddda;
-  color: rgb(48, 47, 47);
+  color: rgb(22, 22, 22);
   h1 {
     font-weight: 200;
     font-size: 42px;
   }
   h2 {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
   }
   h3 {
-    font-weight: 500;
+    font-weight: 20;
     font-size: 14px;
+  }
+}
+.border {
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  border: 16px solid rgba(209, 209, 209, 0.727);
+  z-index: 2;
+}
+.background {
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-size: cover;
+  animation: move infinite 900ms alternate
+    linear(
+      0,
+      0.009,
+      0.035 2.1%,
+      0.141,
+      0.281 6.7%,
+      0.723 12.9%,
+      0.938 16.7%,
+      1.017,
+      1.077,
+      1.121,
+      1.149 24.3%,
+      1.159,
+      1.163,
+      1.161,
+      1.154 29.9%,
+      1.129 32.8%,
+      1.051 39.6%,
+      1.017 43.1%,
+      0.991,
+      0.977 51%,
+      0.974 53.8%,
+      0.975 57.1%,
+      0.997 69.8%,
+      1.003 76.9%,
+      1.004 83.8%,
+      1
+    );
+}
+
+@keyframes move {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.2;
   }
 }
