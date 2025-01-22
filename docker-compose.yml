@@ -1,0 +1,13 @@
+services:
+  main:
+    container_name: portfolio
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 4001:80
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./src:/app/src
