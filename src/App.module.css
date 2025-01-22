@@ -1,0 +1,26 @@
+.wrapper {
+  font-family: monospace;
+  font-family: "IBM Plex Mono", monospace;
+  font-smooth: antialiased;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  background: #dfddda;
+  color: rgb(48, 47, 47);
+  h1 {
+    font-weight: 200;
+    font-size: 42px;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
