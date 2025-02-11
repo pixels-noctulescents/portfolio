@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 .wrapper {
   font-family: monospace;
   font-family: "IBM Plex Mono", monospace;
@@ -7,78 +9,93 @@
   display: flex;
   flex-direction: column;
   user-select: none;
-  gap: 5rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
-  background: #dfddda;
-  color: rgb(22, 22, 22);
+  background: rgb(11, 12, 11);
+  color: rgb(226, 230, 227);
+  cursor: pointer;
   h1 {
-    font-weight: 200;
-    font-size: 42px;
+    font-family: "Bebas Neue", serif;
+    font-weight: 500;
+    font-size: 28px;
+    &:hover {
+      animation: jitter 6ms infinite linear alternate;
+    }
   }
   h2 {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
+
+    &:hover {
+      animation: jitter 6ms infinite linear alternate;
+    }
   }
   h3 {
     font-weight: 20;
-    font-size: 14px;
+    font-size: 12px;
+    &:hover {
+      animation: jitter 6ms infinite linear alternate;
+    }
   }
 }
-.border {
-  width: 100dvw;
-  height: 100dvh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  border: 16px solid rgba(209, 209, 209, 0.727);
-  z-index: 2;
-}
+
 .background {
   width: 100dvw;
   height: 100dvh;
   position: fixed;
+  z-index: 4;
   top: 0;
   left: 0;
   pointer-events: none;
-  background-size: cover;
-  animation: move infinite 900ms alternate
-    linear(
-      0,
-      0.009,
-      0.035 2.1%,
-      0.141,
-      0.281 6.7%,
-      0.723 12.9%,
-      0.938 16.7%,
-      1.017,
-      1.077,
-      1.121,
-      1.149 24.3%,
-      1.159,
-      1.163,
-      1.161,
-      1.154 29.9%,
-      1.129 32.8%,
-      1.051 39.6%,
-      1.017 43.1%,
-      0.991,
-      0.977 51%,
-      0.974 53.8%,
-      0.975 57.1%,
-      0.997 69.8%,
-      1.003 76.9%,
-      1.004 83.8%,
-      1
-    );
+  background-repeat: repeat;
+  animation: move 10ms infinite linear alternate;
 }
 
 @keyframes move {
-  from {
-    opacity: 0.1;
+  0% {
+    opacity: 0;
+    transform: translate(10px, -1px);
   }
-  to {
-    opacity: 0.2;
+  100% {
+    opacity: 1;
+    transform: translate(-1px, -500px);
+  }
+}
+
+@keyframes jitter {
+  0% {
+    text-shadow: 1px 3px red, 3px 4px blue, 2px 2px green, 3px 3px yellow;
+  }
+  10% {
+    text-shadow: 2px 2px red, 3px 4px blue, 3px 2px green;
+  }
+  20% {
+    text-shadow: 2px 2px red, 3px 4px blue, 3px 2px green;
+  }
+  30% {
+    text-shadow: 2px 2px red, 3px 4px rgba(0, 0, 255, 0.24), 3px 2px green;
+  }
+  40% {
+    text-shadow: 2px 2px red, 3px 4px blue, 3px 2px green;
+  }
+  50% {
+    text-shadow: 2px 2px red, 3px 4px blue, -3px 2px rgba(0, 128, 0, 0.322);
+  }
+  60% {
+    text-shadow: 2px 2px rgba(255, 0, 0, 0.233), 3px 4px blue, 3px 2px green;
+  }
+  30% {
+    text-shadow: 2px 2px red, 3px 4px blue, 3px 2px green;
+  }
+  80% {
+    text-shadow: 2px 2px red, 3px 2px blue, 1px 2px green;
+  }
+  90% {
+    text-shadow: 2px 2px red, 3px 4px blue, 3px 2px green;
+  }
+  100% {
+    text-shadow: 2px 2px rgba(255, 0, 0, 0.219), 3px 4px blue,
+      -3px 2px rgba(0, 128, 0, 0.322);
   }
 }
